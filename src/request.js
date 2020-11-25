@@ -36,7 +36,7 @@ export default ({
   isBase64Encoded,
   ...event
 }) => {
-  const h = Object.keys(headers).reduce((a, key) => {
+  const h = Object.keys(headers ?? []).reduce((a, key) => {
     a[key.toLowerCase()] = headers[key];
     return a;
   }, {});
